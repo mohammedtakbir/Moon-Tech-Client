@@ -4,7 +4,8 @@ export const initialState = {
     loading: false,
     error: null,
     products: [],
-    cart: []
+    cart: [],
+    wishList: []
 }
 export const productReducer = (state, action) => {
     switch (action.type) {
@@ -29,6 +30,11 @@ export const productReducer = (state, action) => {
             return {
                 ...state,
                 cart: [...state.cart, action.payload]
+            }
+        case actionsType.ADD_TO_WISHLIST:
+            return {
+                ...state,
+                wishList: [...state.wishList, action.payload]
             }
         default:
             return state

@@ -19,7 +19,6 @@ const TopRated = () => {
         status = <p>Products list is empty</p>
     }
     if (!loading && !error && products.length) {
-        // const topRated = products.filter(product => product.rating >= 4)
         status = products.filter(product => product.rating >= 4).map((product, i) => <ProductCard key={i} product={product} />)
     }
 

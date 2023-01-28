@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect } from 'react';
 import { useReducer } from 'react';
 import { useContext } from 'react';
 import { actionsType } from '../state/ProductState/ActionsType';
